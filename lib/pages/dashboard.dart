@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'detail.dart';
+import 'package:untitled/controller/apicall.dart';
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
 
@@ -8,6 +9,12 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+
+  @override
+  void initState(){
+    super.initState();
+    Apicall().getnewsdata();
+  }
   Widget horizontallistitem(
       Size size,
       String title,
